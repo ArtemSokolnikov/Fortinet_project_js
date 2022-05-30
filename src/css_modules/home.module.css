@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    height: 70%;
+}
+
+.mainBtn {
+    margin-left: 30px;
+}
+
+.headerTitle {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.mainItem {
+    margin-top: 40px;
+    min-height: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.248);
+    border-radius: 10px;
+    padding-bottom: 10px;
+}

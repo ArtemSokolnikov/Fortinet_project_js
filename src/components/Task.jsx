@@ -32,12 +32,14 @@ const Task = ({ location, index, content, deleteTask, handlieClickForwardTask, h
     }, [])
 
     return (
-        <div className= {style.box}>
-            <h4>{content}</h4>
-            <div className= {style.btnRemoveEdit}>
-                <button className= {style.btnItems} onClick={handlieClickBack} disabled={btnBack}><ArrowBackIcon sx={{ fontSize: 22 }} /></button>
-                <button className= {style.btnItems} onClick={handlieClickForward} disabled={btnFwd}><ArrowForwardIcon sx={{ fontSize: 22 }} /></button>
-                <button className= {style.btnItems} onClick={handlieClickRemove}><DeleteIcon sx={{ fontSize: 22 }} /></button>
+        <div className="animate__animated animate__fadeIn">
+            <div className= {style.box}>
+                <h4>{content}</h4>
+                <div className= {style.btnRemoveEdit}>
+                    <button className= {style.btnItems} onClick={handlieClickBack} disabled={btnBack}><ArrowBackIcon sx={{ fontSize: 22 }} /></button>
+                    <button className= {style.btnItems} onClick={handlieClickForward} disabled={btnFwd}><ArrowForwardIcon sx={{ fontSize: 22 }} /></button>
+                    <button className= {style.btnItems} onClick={handlieClickRemove}><DeleteIcon sx={{ fontSize: 22 }} /></button>
+                </div>
             </div>
         </div>
     );

@@ -118,84 +118,86 @@ const Home = () => {
             })
         }
     }
-
+    
     return (
         <HomeContainer>
             <div className={style.header}>
-                <TextField onChange={handleCreateTask} id="outlined-basic" label="New task name" variant="outlined" value={currentTask || ''} />
-                <div className={style.mainBtn} ><Button onClick={handlieClickAddTask} variant="contained">Create task</Button></div>
+                <TextField className="animate__animated animate__pulse" onChange={handleCreateTask} id="outlined-basic" label="New task name" variant="outlined" value={currentTask || ''} />
+                <div  className={style.mainBtn} ><Button className="animate__animated animate__pulse" onClick={handlieClickAddTask} variant="contained">Create task</Button></div>
             </div>
-            <div className="row">
-                <div className="col">
-                    <div className={style.mainItem} >
-                        <h3 className={style.headerTitle}> Backlog</h3>
-                        {tasks.map((item, index) => (
-                            <Task
-                                location={'backLog'}
-                                key={index + 1}
-                                index={index}
-                                content={item}
-                                deleteTask={removeTask}
-                                setTasks={setTasks}
-                                currentTask={currentTask}
-                                handlieClickForwardTask={handlieClickForward}
-                            />
-                        ))}
+            <div className="animate__animated animate__pulse">
+                <div className="row">
+                    <div className="col">
+                        <div className={style.mainItem} >
+                            <h3 className={style.headerTitle}> Backlog</h3>
+                            {tasks.map((item, index) => (
+                                <Task
+                                    location={'backLog'}
+                                    key={index + 1}
+                                    index={index}
+                                    content={item}
+                                    deleteTask={removeTask}
+                                    setTasks={setTasks}
+                                    currentTask={currentTask}
+                                    handlieClickForwardTask={handlieClickForward}
+                                />
+                            ))}
+                        </div>
+    
                     </div>
-
-                </div>
-                <div className="col">
-                    <div className={style.mainItem} >
-                        <h3 className={style.headerTitle}> To Do</h3>
-                        {tasksToDo.map((item, index) => (
-                            <Task
-                                key={index + 1}
-                                location={'toDo'}
-                                index={index}
-                                content={item}
-                                deleteTask={removeTask}
-                                setTasks={setTasks}
-                                currentTask={currentTask}
-                                handlieClickForwardTask={handlieClickForward}
-                                handlieClickBackTask={handlieClickBack}
-                            />
-                        ))}
+                    <div className="col">
+                        <div className={style.mainItem} >
+                            <h3 className={style.headerTitle}> To Do</h3>
+                            {tasksToDo.map((item, index) => (
+                                <Task
+                                    key={index + 1}
+                                    location={'toDo'}
+                                    index={index}
+                                    content={item}
+                                    deleteTask={removeTask}
+                                    setTasks={setTasks}
+                                    currentTask={currentTask}
+                                    handlieClickForwardTask={handlieClickForward}
+                                    handlieClickBackTask={handlieClickBack}
+                                />
+                            ))}
+                        </div>
                     </div>
-                </div>
-                <div className="col">
-                    <div className={style.mainItem} >
-                        <h3 className={style.headerTitle}> Ongoing</h3>
-                        {tasksOnGoing.map((item, index) => (
-                            <Task
-                                key={index + 1}
-                                location={'onGoing'}
-                                index={index}
-                                content={item}
-                                deleteTask={removeTask}
-                                setTasks={setTasks}
-                                currentTask={currentTask}
-                                handlieClickForwardTask={handlieClickForward}
-                                handlieClickBackTask={handlieClickBack}
-                            />
-                        ))}
+                    <div className="col">
+                        <div className={style.mainItem} >
+                            <h3 className={style.headerTitle}> Ongoing</h3>
+                            {tasksOnGoing.map((item, index) => (
+                                <Task
+                                    key={index + 1}
+                                    location={'onGoing'}
+                                    index={index}
+                                    content={item}
+                                    deleteTask={removeTask}
+                                    setTasks={setTasks}
+                                    currentTask={currentTask}
+                                    handlieClickForwardTask={handlieClickForward}
+                                    handlieClickBackTask={handlieClickBack}
+                                />
+                            ))}
+                        </div>
                     </div>
-                </div>
-                <div className="col">
-                    <div className={style.mainItem} >
-                        <h3 className={style.headerTitle}> Done</h3>
-                        {tasksDone.map((item, index) => (
-                            <Task
-                                key={index + 1}
-                                location={'done'}
-                                index={index}
-                                content={item}
-                                deleteTask={removeTask}
-                                setTasks={setTasks}
-                                currentTask={currentTask}
-                                handlieClickForwardTask={handlieClickForward}
-                                handlieClickBackTask={handlieClickBack}
-                            />
-                        ))}
+                    <div className="col">
+                        <div className={style.mainItem} >
+                            <h3 className={style.headerTitle}> Done</h3>
+                            {tasksDone.map((item, index) => (
+                                <Task className="animate__animated animate__bounceOut"
+                                    key={index + 1}
+                                    location={'done'}
+                                    index={index}
+                                    content={item}
+                                    deleteTask={removeTask}
+                                    setTasks={setTasks}
+                                    currentTask={currentTask}
+                                    handlieClickForwardTask={handlieClickForward}
+                                    handlieClickBackTask={handlieClickBack}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
